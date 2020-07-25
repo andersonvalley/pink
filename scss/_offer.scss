@@ -20,14 +20,19 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      transform: rotate(5deg);
+   }
 
+   &__img {
+      overflow: visible;
+      z-index: 30;
    }
 
    &__wrapper {
       max-width: 300px;
       margin-right: 20px;
       text-align: center;
+
+
    }
 
    &__title {
@@ -45,8 +50,30 @@
    }
 
    &__background {
-      background-color: #f2f2f2;
-      transform: rotate(-6deg);
+      background: rgb(255, 255, 255);
+      background: linear-gradient(177deg, rgba(255, 255, 255, 0.3925945378151261) 15%, rgba(242, 242, 242, 1) 15%);
+   }
 
+   &__container-flex {
+      display: flex;
+   }
+
+   &__imgsec {
+      padding-top: 70px;
+      padding-bottom: 70px;
+      margin-right: 65px;
+   }
+
+   &__wra {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   &__wra>a {
+      color: #d22856;
+      line-height: 30px;
+      text-decoration: underline;
+      padding-top: 30px;
    }
 }

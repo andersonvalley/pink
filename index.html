@@ -13,16 +13,19 @@
 <body>
    <header class="header">
       <div class="header__top-menu top-menu">
-         <div class="header__container container">
+         <div class="header__container container ">
             <div class="top-menu__logo">
                <a class="top-menu__logo-link" href="#"><img src="img/logo.png" width="146" height="40" alt="Pink"></a>
             </div>
             <nav class="top-menu__nav">
-               <a href="#">Информация</a>
-               <a href="#">Возможности</a>
-               <a href="#">Отзывы</a>
-               <a href="#">Стоимость</a>
+               <a class="top-menu__nav-link" href="#">Информация</a>
+               <a class="top-menu__nav-link" href="#">Возможности</a>
+               <a class="top-menu__nav-link" href="#">Отзывы</a>
+               <a class="top-menu__nav-link" href="#">Стоимость</a>
             </nav>
+            <div class="burger-button">
+               <span class="burger-button__link"></span>
+            </div>
          </div>
       </div>
       <div class="header__wrapper container">
@@ -58,28 +61,38 @@
       <div class="offer__background">
          <div class="offer__container offer__container-prop">
             <div class="offer__wrapper">
-               <div class="offer__img"><img src="img/offer1.png" alt=""></div>
+               <div class="offer__img first"><img src="img/offer1.png" alt=""></div>
                <div class="offer__title">Поднимает настроение</div>
                <div class="offer__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в
                   несколько кликов!</div>
             </div>
             <div class="offer__wrapper">
-               <div class="offer__img"><img src="img/offer2.png" alt=""></div>
+               <div class="offer__img second"><img src="img/offer2.png" alt=""></div>
                <div class="offer__title">Меняет мир вокруг</div>
                <div class="offer__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить
                   эффект
                </div>
             </div>
             <div class="offer__wrapper">
-               <div class="offer__img"><img src="img/offer3.png" alt=""></div>
+               <div class="offer__img third"><img src="img/offer3.png" alt=""></div>
                <div class="offer__title">Заводит
                   новых друзей</div>
                <div class="offer__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
                </div>
             </div>
          </div>
+         <div class="offer__container offer__container-flex">
+            <div class="offer__imgsec"><img src="img/alarm.png" alt=""></div>
+            <div class="offer__wra">
+               <div class="offer__title">Эффект на 24 часа!</div>
+               <div class="offer__text">Британские ученые провели исследования и доказали,
+                  что положительный эффект от использования приложения длится целые сутки!</div>
+               <a href="#">Узнать больше об исследовании</a>
+            </div>
+         </div>
       </div>
    </section>
+   <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -17,6 +17,18 @@ a {
   margin: 0 auto;
 }
 
+@media (max-width: 940px) {
+  .container {
+    padding: 0 0;
+  }
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .header {
   width: 100%;
   height: 100%;
@@ -134,6 +146,8 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
 }
 
 .top-menu__nav a {
@@ -157,6 +171,115 @@ a {
 
 .top-menu__nav a:active {
   opacity: 0.3;
+}
+
+.top-menu__logo-link {
+  margin-left: 35px;
+}
+
+.header__container {
+  height: 110px;
+}
+
+@media (max-width: 940px) {
+  .burger-button {
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    top: 0;
+    right: 35px;
+    background-color: transparent;
+    position: relative;
+  }
+  .burger-button__link::before, .burger-button__link::after, .burger-button__link {
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background-color: #fff;
+    top: 15px;
+    right: 0px;
+  }
+  .burger-button__link::before {
+    content: "";
+    top: -10px;
+    left: 0;
+  }
+  .burger-button__link::after {
+    content: "";
+    top: 10px;
+    left: 0;
+  }
+  .burger-button:hover .burger-button__link,
+  .burger-button:hover .burger-button__link::before,
+  .burger-button:hover .burger-button__link::after {
+    background-color: #d22856;
+  }
+  .burger-button:active .burger-button__link,
+  .burger-button:active .burger-button__link::before,
+  .burger-button:active .burger-button__link::after {
+    opacity: 0.5;
+  }
+  .header__container-active .burger-button__link::after {
+    display: none;
+  }
+  .header__container-active .burger-button__link {
+    position: absolute;
+    top: 20px;
+    width: 35px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .header__container-active .burger-button__link:before {
+    position: absolute;
+    top: 0;
+    width: 35px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .header__container-active .top-menu__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #283645;
+    width: 100%;
+    position: absolute;
+    top: 110px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    overflow: hidden;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .header__container-active .top-menu__nav a {
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    -webkit-box-shadow: 0 1px 0 #000000, inset 0 2px 0 rgba(255, 255, 255, 0.15);
+            box-shadow: 0 1px 0 #000000, inset 0 2px 0 rgba(255, 255, 255, 0.15);
+    border: none;
+  }
+  .header__container-active .top-menu__nav a:hover {
+    color: #d22856;
+  }
+  .header__container-active .top-menu__nav a:active {
+    opacity: 0.5;
+  }
+  .header__container-active {
+    background-color: #283645;
+  }
+  .header__wrapper {
+    padding-top: 100px;
+  }
 }
 
 .offer {
@@ -188,8 +311,11 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
+}
+
+.offer__img {
+  overflow: visible;
+  z-index: 30;
 }
 
 .offer__wrapper {
@@ -213,8 +339,39 @@ a {
 }
 
 .offer__background {
-  background-color: #f2f2f2;
-  -webkit-transform: rotate(-6deg);
-          transform: rotate(-6deg);
+  background: white;
+  background: linear-gradient(177deg, rgba(255, 255, 255, 0.392595) 15%, #f2f2f2 15%);
+}
+
+.offer__container-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.offer__imgsec {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  margin-right: 65px;
+}
+
+.offer__wra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.offer__wra > a {
+  color: #d22856;
+  line-height: 30px;
+  text-decoration: underline;
+  padding-top: 30px;
 }
 /*# sourceMappingURL=style.css.map */
